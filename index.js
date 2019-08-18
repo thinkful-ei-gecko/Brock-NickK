@@ -95,19 +95,19 @@ function evaluateAnswers() {
   //check for correct answer and display results and/or correct answer, also display updated score
   let radioValue = $('input[name=option]:checked').val();
 
-  console.log('radio value', radioValue);
-  console.log('correct answer', store[currentQuestion].correctAnswer);
+  //console.log('radio value', radioValue);
+  //console.log('correct answer', store[currentQuestion].correctAnswer);
 
   if (store[currentQuestion].answers.indexOf(radioValue) === store[currentQuestion].correctAnswer) {
     userScore.correct++;
-    console.log(userScore.correct);
+    // console.log(userScore.correct);
     $('#feedbackCorrect').removeClass('hidden');
   }
   
-   else {
+  else {
     userScore.incorrect++;
     getCorrectAnswer();
-    console.log(userScore.incorrect);
+    // console.log(userScore.incorrect);
     $('#feedbackIncorrect').removeClass('hidden');
   }
 } 
@@ -119,7 +119,7 @@ let userScore = {
 
 function getCorrectAnswer() {
   //create text for incorrect result including correct answer
-  let popupAnswerText = `<h3>Incorrect! But don't worry, be frappe!<br>The correct answer is: ${store[currentQuestion].correctAnswer}.</h3><br>`;
+  let popupAnswerText = `<h3>Incorrect! Wah wah wah wahahahahah *Mario Death noises*!<br/> The correct answer is: ${store[currentQuestion].correctAnswer}.</h3><br>`;
   $('#feedbackIncorrect').html(popupAnswerText);
 } 
         

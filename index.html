@@ -17,26 +17,24 @@
             <h1>How much of a Nerd are you?</h1>
             <button type="button" id="start-button">Let's find out!</button>
         </section>
-        <section id='questionPage' class='hidden blackbox'>
+        <section id='questionPage' class='hidden borderBox'>
             <form id='nerdForm' method='get'>
                 <fieldset name='question-set'>
                     <div id='quizQuestion' class='nerdQuestion'></div>
                     <div class='nerdAnswers' role='radiogroup'></div>
                     <div class='nerdScore'></div>
-                    <button id='submitAnswer' class='button hidden disabled' type='submit' disabled>Am I right?</button>
+                    <button id='submitAnswer' class='button hidden disabled' type='submit' disabled>Check My Answer</button>
                 </fieldset>
             </form>
             <button id='nextQuestion' class='button hidden' type='submit'>Next</button>
             <div id='feedbackCorrect' class='allFeedback hidden'>
                 <h3>Correct!</h3>
-                <br>
             </div>
-            <div id='feedbackIncorrect' class='hidden'>
-            <br></div>
+            <div id='feedbackIncorrect' class='hidden'></div>
             <div class='resultsCounter'></div>
         </section>
 
-        <section id='finalPage' class='hidden blackbox'>
+        <section id='finalPage' class='hidden borderBox'>
             <h1>How did you Fair in the world of Nerd?</h1>
             <div id='finalCorrect'><br></div>
             <div>
