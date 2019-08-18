@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Nerd-Alert Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    
+    <header>
+        <h1>Nerd-Alert!</h1>
+    </header>
+    <main>
+        <section id="startPage" class="quizStart">
+            <h1>How much of a Nerd are you?</h1>
+            <button type="button" id="start-button">Let's find out!</button>
+        </section>
+        <section id='questionPage' class='hidden blackbox'>
+            <form id='nerdForm' method='get'>
+                <fieldset name='question-set'>
+                    <div id='quizQuestion' class='nerdQuestion'></div>
+                    <div class='nerdAnswers' role='radiogroup'></div>
+                    <div class='nerdScore'></div>
+                    <button id='submitAnswer' class='button hidden disabled' type='submit' disabled>Am I right?</button>
+                </fieldset>
+            </form>
+            <button id='nextQuestion' class='button hidden' type='submit'>Next</button>
+            <div id='feedbackCorrect' class='allFeedback hidden'>
+                <h3>Correct!</h3>
+                <br>
+            </div>
+            <div id='feedbackIncorrect' class='hidden'>
+            <br></div>
+            <div class='resultsCounter'></div>
+        </section>
+
+        <section id='finalPage' class='hidden blackbox'>
+            <h1>How did you Fair in the world of Nerd?</h1>
+            <div id='finalCorrect'><br></div>
+            <div>
+                <p class='something'>Feeling too normal? Wanna get Nerdier? Well try again!</p>
+            </div>
+            <button id='retake' type='submit'>Take another shot!</button>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>    
 </body>
 </html>
