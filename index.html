@@ -9,15 +9,15 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>Nerd-Alert!</h1>
     </header>
-    <main>
+    <main role="main">
         <section id="startPage" class="quizStart">
             <h1>How much of a Nerd are you?</h1>
             <button type="button" id="start-button">Let's find out!</button>
         </section>
-        <section id='questionPage' class='hidden borderBox'>
+        <section id='questionPage' class='hidden borderBox' role="region">
             <form id='nerdForm' method='get'>
                 <fieldset name='question-set'>
                     <div id='quizQuestion' class='nerdQuestion'></div>

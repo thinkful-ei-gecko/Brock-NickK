@@ -118,8 +118,10 @@ let userScore = {
 };
 
 function getCorrectAnswer() {
+  let rightAnswer = store[currentQuestion].correctAnswer;
+  let textAnswer = store[currentQuestion].answers[rightAnswer];
   //create text for incorrect result including correct answer
-  let popupAnswerText = `<h3>Incorrect! Wah wah wah wahahahahah *Mario Death noises*!<br/> The correct answer is: ${store[currentQuestion].correctAnswer}.</h3><br>`;
+  let popupAnswerText = `<h3>Incorrect! Wah wah wah wahahahahah *Mario Death noises*!<br/> The correct answer is: ${textAnswer}.</h3><br>`;
   $('#feedbackIncorrect').html(popupAnswerText);
 } 
         
@@ -159,7 +161,15 @@ function showFinalScore() {
 function restartQuiz() {
   // takes user back to start upon click
   $('#retake').click(function() {
-    location.reload();
+    userScore = {
+      correct: 0,
+      incorrect: 0,
+    };
+    currentQuestion = 0;
+    $('#startPage').removeClass('hidden');
+    $('#questionPage').addClass('hidden');
+    $('#submitAnswer').addClass('hidden');
+    $('#finalPage').addClass('hidden');
   });
 }
   
